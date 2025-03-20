@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: back-svc
+  namespace: sim
+spec:
+  selector:
+    app: back
+  type: NodePort
+  ports:
+  - protocol: TCP
+    targetPort: 5001
+    port: 5001 
